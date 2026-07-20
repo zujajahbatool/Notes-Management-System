@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Notes</title>
+  </head>
+  <body>
+    
+    <header>
+      <nav class="navbar">
+        <div class="nav-brand">
+          <h1>NOTES</h1>
+        </div>
+
+        <div class="nav-searchbar">
+          <input type="text" placeholder="Enter title of notes" id="search-input">
+        </div>
+
+        <div class="nav-btns">
+          <button type="button" id="open-add-modal-btn" class="btn-primary">Add Notes</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container">
+
+      <section class="stats">
+        <div class="stats-item">Total Notes: <strong id="total-items">0</strong></div>
+        <div class="stats-item">Completed Notes: <strong id="completed-items">0</strong></div>
+      </section>
+
+      <section class="table-container">
+        <table class="notes-table">
+          <thead>
+            <tr>
+              <th>Sr no.</th>
+              <th>Status</th>
+              <th>Title</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="notes-list"></tbody>
+        </table>
+      </section>
+
+      <dialog id="add-note-dialog">
+        <form class="modal-form" id="add-note-form" method="dialog">
+          <h2>Add New Note</h2>
+          <input id="note-title-input" type="text" placeholder="Enter note's title (Required)" required>
+          <textarea id="note-content-input" placeholder="Enter note content (Optional)" rows="4"></textarea>
+          <div class="modal-action">
+            <button type="button" id="cancel-modification-btn">Cancel</button>
+            <button type="submit" id="save-changes-btn">Save Changes</button>
+          </div>
+        </form>
+      </dialog>
+
+      <dialog id="note-card-dialog">
+        <article class="note-card">
+          <header>
+            <h2 id="card-title"></h2>
+            <button type="button" class="close-btn" id="close-card-btn">&times;</button>
+          </header>
+          <div id="card-body">
+            <p id="card-content"></p>
+          </div>
+          <footer class="card-footer">
+            <span class="status-badge" id="card-status"></span>
+          </footer>
+        </article>
+      </dialog>
+
+    </main>
+    <script src="scripts.js"></script>
+  </body>
+</html>
