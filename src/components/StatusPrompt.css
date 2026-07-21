@@ -1,0 +1,24 @@
+.status-prompt-card {
+  max-width: 380px;
+  text-align: center;
+}
+
+.status-prompt-text {
+  font-family: var(--font-body);
+  color: var(--ink-soft);
+  margin: 0 0 22px;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+.status-prompt-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.status-choice {
+  flex: 1;
+  justify-content: center;
+  font-size: 0.92rem;
+  padding: 14px 10px;
+}
