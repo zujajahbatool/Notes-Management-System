@@ -1,0 +1,159 @@
+.btn {
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: transform 0.12s ease, background 0.12s ease, color 0.12s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+/*primary or secondary main call-to-action pair (Save Changes / Cancel, Add Note) */
+.btn-primary,
+.btn-secondary {
+  font-size: 0.92rem;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 2px solid var(--ink);
+}
+
+.btn-primary {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--ink);
+}
+
+/*ghost — secondary row action ("View note") */
+.btn-ghost {
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1.5px solid var(--ink);
+  background: transparent;
+  color: var(--ink);
+}
+
+.btn-ghost:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+/* Danger — destructive row/footer action ("Delete") */
+.btn-danger {
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1.5px solid var(--danger);
+  background: transparent;
+  color: var(--danger);
+}
+
+.btn-danger:hover {
+  background: var(--danger);
+  color: var(--paper);
+}
+
+/*icon — small labelled action ("Edit note") */
+.btn-icon {
+  flex-shrink: 0;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1.5px solid var(--ink);
+  background: transparent;
+  color: var(--ink);
+}
+
+.btn-icon:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+/*link - a note's title, rendered as a button for the "view" action */
+.btn-link {
+  background: none;
+  border: none;
+  font-weight: 600;
+  color: var(--ink);
+  padding: 0;
+  text-align: left;
+}
+
+.btn-link:hover {
+  text-decoration: underline;
+  transform: none;
+}
+
+/*pill — filter-bar choices (All / Incomplete / Completed) */
+.btn-pill {
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 7px 16px;
+  border-radius: 999px;
+  border: 2px solid var(--ink);
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.btn-pill.is-active {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+/*status — colored pill used both as the list's toggle-complete
+   control and the status-prompt's Completed/Incomplete choice */
+.btn-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
+  font-weight: 700;
+  border-radius: 999px;
+  border: 2px solid currentColor;
+  background: transparent;
+}
+
+.btn-status .status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.btn-status.tone-incomplete {
+  color: var(--accent-2);
+}
+
+.btn-status.tone-complete {
+  color: var(--complete);
+}
+
+.btn-status.tone-incomplete:hover {
+  background: var(--accent-2);
+  color: var(--card-bg);
+}
+
+.btn-status.tone-complete:hover {
+  background: var(--complete);
+  color: var(--card-bg);
+}
+
+/*non-interactive status pill (view-note modal's status display)
+   reuses the same look without the button affordances. */
+.btn-status.is-static {
+  cursor: default;
+}
+
+.btn-status.is-static:hover {
+  transform: none;
+  background: transparent;
+  color: inherit;
+}
