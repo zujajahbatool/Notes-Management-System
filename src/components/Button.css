@@ -124,7 +124,7 @@
 }
 
 .btn-status .status-dot {
-  width: 7px;
+  width: auto;
   height: 7px;
   border-radius: 50%;
   color: var(--ink);
