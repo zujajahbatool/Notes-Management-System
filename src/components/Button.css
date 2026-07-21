@@ -114,18 +114,21 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  width: fit-content;
-  font-weight: 700;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 7px 16px;
   border-radius: 999px;
-  border: 2px solid currentColor;
-  background: transparent;
+  border: 2px solid var(--ink);
+  background: var(--paper);
+  color: var(--ink);
 }
 
 .btn-status .status-dot {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: currentColor;
+  color: var(--ink);
+  background: var(--paper);
 }
 
 .btn-status.tone-incomplete {
