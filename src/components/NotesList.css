@@ -1,0 +1,107 @@
+.notes-list-section {
+  background: var(--card-bg);
+  border: 2px solid var(--ink);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.notes-list-head {
+  display: grid;
+  place-content: center;
+  place-items: center;
+  grid-template-columns: 70px 1fr 150px 220px;
+  gap: 12px;
+  padding: 12px 20px;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.notes-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.note-row {
+  display: grid;
+  grid-template-columns: 70px 1fr 150px 220px;
+  gap: 12px;
+  align-items: center;
+  padding: 14px 20px;
+  border-bottom: 1px dashed var(--ink);
+}
+
+.note-row:last-child, .notes-list:last-child {
+  border-bottom: none;
+}
+.note-row:hover {
+  background: var(--paper);
+}
+
+.note-cell-id {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+}
+
+/* Layout-only overrides on top of the shared .btn-link look */
+.note-cell-title {
+  font-size: 0.98rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Layout-only overrides on top of the shared .btn-status look */
+.note-status-badge {
+  font-size: 0.78rem;
+  padding: 5px 12px;
+}
+
+.note-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.notes-empty {
+  list-style: none;
+  padding: 40px 20px;
+  text-align: center;
+  color: var(--ink-soft);
+  font-family: var(--font-body);
+}
+
+@media (max-width: 720px) {
+  .notes-list-head {
+    display: none;
+  }
+
+  .note-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 16px;
+  }
+
+  .note-cell-id {
+    order: 1;
+  }
+
+  .note-cell-title {
+    order: 2;
+    white-space: normal;
+  }
+
+  .note-status-badge {
+    order: 3;
+  }
+
+  .note-actions {
+    order: 4;
+    justify-content: flex-start;
+  }
+}
