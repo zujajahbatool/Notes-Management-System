@@ -1,0 +1,124 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(35, 32, 27, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 100;
+  animation: overlay-fade 0.15s ease;
+}
+
+@keyframes overlay-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-card {
+  position: relative;
+  background: var(--card-bg);
+  border: 2px solid var(--ink);
+  border-radius: 16px;
+  padding: 28px 32px 24px;
+  width: 100%;
+  max-width: 480px;
+  max-height: 88vh;
+  overflow-y: auto;
+  box-shadow: 8px 8px 0 var(--accent);
+  animation: card-pop 0.16s ease;
+}
+
+@keyframes card-pop {
+  from { transform: translateY(6px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.modal-spiral {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  top: -13px;
+  left: 32px;
+  right: 32px;
+  justify-content: space-between;
+}
+
+.spiral-hole {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 2px solid var(--ink);
+}
+
+.modal-card h2 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  margin: 6px 0 20px;
+  color: var(--ink);
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.field-label {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-soft);
+  margin-bottom: 6px;
+}
+
+.required-mark {
+  color: var(--danger);
+}
+
+.optional-mark {
+  text-transform: none;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.modal-form input[type='text'],
+.modal-form textarea {
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+  color: var(--ink);
+  border: 2px solid var(--paper-line);
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin-bottom: 18px;
+  background: var(--paper);
+  resize: vertical;
+}
+
+.modal-form input[type='text']:focus,
+.modal-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.field-error {
+  margin: -12px 0 16px;
+  font-size: 0.82rem;
+  color: var(--danger);
+  font-family: var(--font-body);
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+@media (max-width: 520px) {
+  .modal-card {
+    padding: 24px 20px 20px;
+  }
+}
